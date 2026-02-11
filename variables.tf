@@ -18,7 +18,7 @@ EOT
     iothub_id           = string
     name                = string
     resource_group_name = string
-    authentication_type = optional(string, "keyBased")
+    authentication_type = optional(string) # Default: "keyBased"
     connection_string   = optional(string)
     endpoint_uri        = optional(string)
     entity_path         = optional(string)
