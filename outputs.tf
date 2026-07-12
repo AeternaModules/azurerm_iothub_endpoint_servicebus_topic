@@ -1,3 +1,7 @@
+output "iothub_endpoint_servicebus_topics_id" {
+  description = "Map of id values across all iothub_endpoint_servicebus_topics, keyed the same as var.iothub_endpoint_servicebus_topics"
+  value       = { for k, v in azurerm_iothub_endpoint_servicebus_topic.iothub_endpoint_servicebus_topics : k => v.id }
+}
 output "iothub_endpoint_servicebus_topics_authentication_type" {
   description = "Map of authentication_type values across all iothub_endpoint_servicebus_topics, keyed the same as var.iothub_endpoint_servicebus_topics"
   value       = { for k, v in azurerm_iothub_endpoint_servicebus_topic.iothub_endpoint_servicebus_topics : k => v.authentication_type }
